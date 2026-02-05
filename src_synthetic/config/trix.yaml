@@ -1,0 +1,46 @@
+output_dir: ~/flock/output-petals
+
+dataset:
+  class: Petals
+  root: ~/flock/data/petals
+  version: 0
+
+model:
+  class: TRIX
+  relation_model:
+    class: NBFNet
+    input_dim: 32
+    hidden_dims: [32, 32, 32]
+    message_func: distmult
+    aggregate_func: sum
+    short_cut: yes
+    layer_norm: yes
+  entity_model_1:
+    class: IndNBFNet
+    input_dim: 32
+    hidden_dims: [32, 32]
+    message_func: distmult
+    aggregate_func: sum
+    short_cut: yes
+    layer_norm: yes
+  entity_model_2:
+    class: IndNBFNet
+    input_dim: 32
+    hidden_dims: [32, 32, 32, 32]
+    message_func: distmult
+    aggregate_func: sum
+    short_cut: yes
+    layer_norm: yes
+  test_samples: 1
+
+task:
+  name: SyntheticDatasetExperiment
+
+optimizer:
+  class: AdamW
+  lr: 5.0e-4
+
+train:
+  gpus: {{ gpus }}
+  num_epoch: 5
+  log_interval: 50

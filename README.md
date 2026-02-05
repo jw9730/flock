@@ -24,7 +24,8 @@ Assuming the codebase is located at `~/flock` inside Docker container, install t
 
 ```bash
 cd ~/flock
-pip3 install torch_geometric easydict pybind11
+pip3 install torch_geometric==2.4.0 easydict pybind11 pyyaml jinja2
+pip3 install torch-scatter -f https://data.pyg.org/whl/torch-2.8.0+cu126.html
 bash install_walker.sh
 ```
 
@@ -76,6 +77,43 @@ Execute the following commands to generate the Petals synthetic dataset at `data
 
 ```bash
 python3 generate_petals.py
+```
+
+## Synthetic Dataset Experiments
+
+Flock synthetic dataset experiment
+
+```bash
+cd ~/flock
+python3 src_synthetic/run_petals_flock.py --config src_synthetic/config/flock.yaml --gpus [0]
+```
+
+ULTRA synthetic dataset experiment
+
+```bash
+cd ~/flock
+python3 src_synthetic/run_petals_ultra.py --config src_synthetic/config/ultra.yaml --gpus [0]
+```
+
+MOTIF synthetic dataset experiment
+
+```bash
+cd ~/flock
+python3 src_synthetic/run_petals_motif.py --config src_synthetic/config/motif.yaml --gpus [0]
+```
+
+TRIX synthetic dataset experiment
+
+```bash
+cd ~/flock
+python3 src_synthetic/run_petals_trix.py --config src_synthetic/config/trix.yaml --gpus [0]
+```
+
+Noise injected TRIX synthetic dataset experiment
+
+```bash
+cd ~/flock
+python3 src_synthetic/run_petals_trix.py --config src_synthetic/config/trix_noise_injection.yaml --gpus [0]
 ```
 
 ## References
