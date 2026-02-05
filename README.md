@@ -81,38 +81,22 @@ python3 generate_petals.py
 
 ## Synthetic Dataset Experiments
 
-Flock synthetic dataset experiment
-
 ```bash
 cd ~/flock
+
+# flock
 python3 src_synthetic/run_petals_flock.py --config src_synthetic/config/flock.yaml --gpus [0]
-```
 
-ULTRA synthetic dataset experiment
-
-```bash
-cd ~/flock
+# ultra
 python3 src_synthetic/run_petals_ultra.py --config src_synthetic/config/ultra.yaml --gpus [0]
-```
 
-MOTIF synthetic dataset experiment
-
-```bash
-cd ~/flock
+# motif
 python3 src_synthetic/run_petals_motif.py --config src_synthetic/config/motif.yaml --gpus [0]
-```
 
-TRIX synthetic dataset experiment
-
-```bash
-cd ~/flock
+# trix
 python3 src_synthetic/run_petals_trix.py --config src_synthetic/config/trix.yaml --gpus [0]
-```
 
-Noise injected TRIX synthetic dataset experiment
-
-```bash
-cd ~/flock
+# trix + noise injection
 python3 src_synthetic/run_petals_trix.py --config src_synthetic/config/trix_noise_injection.yaml --gpus [0]
 ```
 
