@@ -3,7 +3,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2510.01510-b31b1b.svg)](https://arxiv.org/abs/2510.01510) \
 **Flock: A Knowledge Graph Foundation Model via Learning on Random Walks** \
 [Jinwoo Kim*](https://jw9730.github.io), [Xingyue Huang*](https://www.cs.ox.ac.uk/people/xingyue.huang/), [Krzysztof Olejniczak](https://scholar.google.com/citations?user=0DqGU5oAAAAJ&hl=en), [Kyungbin Min](https://vllab.kaist.ac.kr/members.php), [Michael Bronstein](https://www.cs.ox.ac.uk/people/michael.bronstein/), [Seunghoon Hong](https://maga33.github.io), [İsmail İlkan Ceylan](https://www.cs.ox.ac.uk/people/ismaililkan.ceylan/) (* equal contribution) \
-arXiv 2025
+ICLR 2026
 
 ![image-flock](./docs/flock.png)
 
